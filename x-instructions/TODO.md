@@ -1,0 +1,1 @@
+- [ ] modify logo to size and mask
