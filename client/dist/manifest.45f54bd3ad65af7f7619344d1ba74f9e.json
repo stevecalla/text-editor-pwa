@@ -25,12 +25,12 @@
       "purpose": "any"
     }
   ],
-  "name": "TODOs Manifest Example",
-  "short_name": "Manifest",
+  "name": "JEST - Just Another Text Editor",
+  "short_name": "Text Editor",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",
-  "description": "Keep track of important tasks!",
+  "description": "Text Editor!",
   "background_color": "#7eb4e2",
   "theme_color": "#7eb4e2"
 }
