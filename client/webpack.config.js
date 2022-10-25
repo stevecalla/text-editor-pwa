@@ -5,9 +5,8 @@ const path = require('path');
 // Require the GenerateSW class of the WorkBoxPlugin 
 const WorkboxPlugin = require('workbox-webpack-plugin');
 // Require the GenerateSW class of the manifest 
-const { InjectManifest } = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-// TODO: Add CSS loaders and babel to webpack.
+// const { InjectManifest } = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
@@ -20,7 +19,7 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      //section added "" public path to prevent auto prefix on manifest path
+      //todo add "" public path to prevent auto prefix on manifest path (S Calla edit)
       publicPath: "",
     },
     plugins: [
@@ -32,17 +31,17 @@ module.exports = () => {
       new WorkboxPlugin.GenerateSW({
         // Exclude images from the precache
         exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-
+        
         // Define runtime caching rules.
         runtimeCaching: [{
           // Match any request ends with .png, .jpg, .jpeg or .svg or .gif.
           urlPattern: /\.(?:png|svg|jpg|jpeg|gif)$/,
           handler: 'NetworkFirst',
-      
+          
           options: {
             // Use a custom cache name.
             cacheName: 'images',
-      
+            
             // Only cache 2 images.
             expiration: {
               maxEntries: 2,
@@ -53,20 +52,20 @@ module.exports = () => {
       // TODO: Create a manifest.json:
       new WebpackPwaManifest({
         name: "TODOs Manifest Example",
-          short_name: "Manifest",
-          orientation: "portrait",
-          display: "standalone",
-          start_url: "./",
-          description: "Keep track of important tasks!",
-          background_color: "#7eb4e2",
-          theme_color: "#7eb4e2",
-          icons: [
-            {
-              src: "./src/images/icon_96x96.png",
-              type: "image/png",
-              sizes: "96x96",
-              purpose: "any"
-            },
+        short_name: "Manifest",
+        orientation: "portrait",
+        display: "standalone",
+        start_url: "./",
+        description: "Keep track of important tasks!",
+        background_color: "#7eb4e2",
+        theme_color: "#7eb4e2",
+        icons: [
+          {
+            src: "./src/images/icon_96x96.png",
+            type: "image/png",
+            sizes: "96x96",
+            purpose: "any"
+          },
             {
               src: "./src/images/icon_128x128.png",
               type: "image/png",
@@ -87,11 +86,12 @@ module.exports = () => {
             }
           ],
         }),      
-    ],
-
-    module: {
-      rules: [
-        {
+      ],
+      
+      // TODO: Add CSS loaders and babel to webpack.
+      module: {
+        rules: [
+          {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
