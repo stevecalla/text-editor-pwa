@@ -18,7 +18,7 @@
 - [ ] page cache - working in icognito but not regular page
 ------
 # TO DO
-## install.js
+## install.js button
 - [ ] add logic
 
 ## database.js
