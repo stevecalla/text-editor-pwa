@@ -20,6 +20,8 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      //section added "" public path to prevent auto prefix on manifest path
+      publicPath: "",
     },
     plugins: [
       new HtmlWebpackPlugin({
