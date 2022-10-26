@@ -1,6 +1,7 @@
 
 - [ ] what is the purpose of the text editor
 - [ ] page is not loading the logo
+- [ ] focus/blur issue
 ------
 # STARTED / IN PROGRESS
 ## webpack.cong
