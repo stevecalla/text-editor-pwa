@@ -2,6 +2,10 @@
 - [ ] what is the purpose of the text editor
 - [ ] page is not loading the logo
 - [ ] focus/blur issue
+- [ ] loading images w/ file loader?
+- [ ] refactor
+- [ ] readme
+- [ ] refactor
 ------
 # STARTED / IN PROGRESS
 ## webpack.cong
