@@ -22,6 +22,7 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
       //todo add "" public path to prevent auto prefix on manifest path (S Calla edit)
       publicPath: "",
+      clean: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -60,7 +61,7 @@ module.exports = () => {
       // }),  
       // TODO: Create a manifest.json:
       new WebpackPwaManifest({
-        name: "JEST - Just Another Text Editor",
+        name: "J.E.S.T. - Just Another Text Editor",
         short_name: "Text Editor",
         orientation: "portrait",
         display: "standalone",
@@ -68,34 +69,53 @@ module.exports = () => {
         description: "Text Editor!",
         background_color: "#7eb4e2",
         theme_color: "#7eb4e2",
+        fingerprints: false,
         icons: [
           {
-            src: "./src/images/icon_96x96.png",
+            src: "./src/assets/icons/icon_96x96.png",
+            destination: 'assets/icons',
             type: "image/png",
             sizes: "96x96",
             purpose: "any"
           },
-            {
-              src: "./src/images/icon_128x128.png",
-              type: "image/png",
-              sizes: "128x128",
-              purpose: "any"
-            },
-            {
-              src: "./src/images/icon_192x192.png",
-              type: "image/png",
-              sizes: "192x192",
-              purpose: "maskable"
-            },
-            {
-              src: "./src/images/icon_512x512.png",
-              type: "image/png",
-              sizes: "512x512",
-              purpose: "any"
-            }
-          ],
-        }),      
-      ],
+          {
+            src: "./src/assets/icons/icon_128x128.png",
+            destination: 'assets/icons',
+            type: "image/png",
+            sizes: "128x128",
+            purpose: "any"
+          },
+          {
+            src: "./src/assets/icons/icon_192x192.png",
+            destination: 'assets/icons',
+            type: "image/png",
+            sizes: "192x192",
+            purpose: "maskable"
+          },
+          {
+            src: "./src/assets/icons/icon_256x256.png",
+            destination: 'assets/icons',
+            type: "image/png",
+            sizes: "256x256",
+            purpose: "any"
+          },
+          {
+            src: "./src/assets/icons/icon_384x384.png",
+            destination: 'assets/icons',
+            type: "image/png",
+            sizes: "384x384",
+            purpose: "any"
+          },
+          {
+            src: "./src/assets/icons/icon_512x512.png",
+            destination: 'assets/icons',
+            type: "image/png",
+            sizes: "512x512",
+            purpose: "any"
+          }
+        ],
+      }),
+    ],
       
       // TODO: Add CSS loaders and babel to webpack.
       module: {
@@ -107,6 +127,14 @@ module.exports = () => {
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images',
+              publicPath: 'images',
+            },
+          },
         },
         {
           test: /\.m?js$/,

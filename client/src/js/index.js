@@ -3,6 +3,8 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 import { registerSW } from './register-sw';
+// import '../images/';
+// import '..assets/icons/';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
