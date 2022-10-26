@@ -1,51 +1,62 @@
-// // const butInstall = document.getElementById('buttonInstall');
-// const installBtn = document.getElementById('buttonInstall');
+const installBtn = document.getElementById("installButton");
+let promptEvent; 
+let isInstalled = false;
 
 // // Logic for installing the PWA
-// // TODO: Add an event handler to the `beforeinstallprompt` event
-// window.addEventListener('beforeinstallprompt', (event) => {});
-// window.addEventListener('beforeinstallprompt', (event) => {
-//   event.preventDefault();
-//   console.log('before install')
-//   installBtn.style.visibility = 'visible';
-//   // textHeader.textContent = 'Click the button to install!';
+// TODO: Add an event handler to the `beforeinstallprompt` event
+// TODO:Capture event and defer
+window.addEventListener('beforeinstallprompt', function (e) {
+  e.preventDefault();
+  promptEvent = e;
+  listenToUserAction();
+  console.log('v103');
+});
 
-//   installBtn.addEventListener('click', () => {
-//     console.log('#1 = ', event);
-//     console.log('#2 = ', event.prompt);
+// TODO: Implement a click event handler on the `butInstall` element
+// listen to install button click
+function listenToUserAction() {
+  installBtn.addEventListener("click", presentAddToHome);
+  if (isInstalled === false) {
+    installBtn.style.display = "block";
+    console.log('false');
+  }
+}
 
-//     event.prompt();
+// present install prompt to user
+function presentAddToHome() {
+  promptEvent.prompt();  // Wait for the user to respond to the prompt
+  promptEvent.userChoice
+    .then(choice => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted', choice.outcome);
+        installBtn.style.display = "none";
+        isInstalled = true;
+        localStorage.setItem('isInstalled', true);
+        } else {
+            console.log('User dismissed', choice.outcome);
+            isInstalled = false;
+            installBtn.style.display = "block";
+            localStorage.setItem('isInstalled', false);
+        }
+    })
+};
 
-//     console.log('#3 = ', event.prompt.userChoice.outcome);
+window.addEventListener('load', () => {
+  if (localStorage.getItem('isInstalled')) {
+    console.log('load storage = ', localStorage.getItem('isInstalled'))
+    isInstalled = localStorage.getItem('isInstalled')
+  };
 
-//     if (event.userChoice.outcome !== "accepted") {
-//       location.reload();
-//     }
+  console.log('isInstalled = ', isInstalled);
 
-//     // installBtn.setAttribute('disabled', true);
-//     // installBtn.textContent = 'Installed!';
-//   });
-// });
-
-// // TODO: Implement a click event handler on the `butInstall` element
-// // butInstall.addEventListener('click', async () => {});
-// installBtn.addEventListener('click', async (event) => {
-//   console.log('#1 = ', event);
-//   console.log('#2 = ', event.prompt);
-
-//   event.prompt();
-      
-//   console.log('#2 = ', event.prompt.userChoice.outcome);
-
-//   if (event.prompt.userChoice.outcome !== "accepted") {
-//     location.reload();
-//   }
-
-//   console.log('install click')
-//   // installBtn.setAttribute('disabled', true);
-//   // installBtn.textContent = 'Installed!';
-
-// });
+  if(isInstalled === true || isInstalled === 'true') {
+    installBtn.style.display = "none";
+    console.log('a = ', isInstalled, typeof(isInstalled));
+  } else {
+    installBtn.style.display = "block";
+    console.log('b = ', isInstalled, typeof(isInstalled));
+  }
+})
 
 // // TODO: Add an handler for the `appinstalled` event
 // window.addEventListener('appinstalled', (event) => {});
@@ -53,33 +64,3 @@
 //   textHeader.textContent = 'Successfully installed!';
 //   console.log('👍', 'appinstalled', event);
 // });
-
-let deferredPrompt;
-const addBtn = document.getElementById("buttonInstall");
-// addBtn.style.display = "none";
-
-window.addEventListener("beforeinstallprompt", (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
-  addBtn.style.display = "block";
-
-  addBtn.addEventListener("click", (e) => {
-    // hide our user interface that shows our A2HS button
-    addBtn.style.display = "none";
-    addBtn.style.visibility = "none";
-    // Show the prompt
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === "accepted") {
-        console.log("User accepted the A2HS prompt");
-      } else {
-        console.log("User dismissed the A2HS prompt");
-      }
-      deferredPrompt = null;
-    });
-  });
-});
