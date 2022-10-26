@@ -49,10 +49,10 @@
 
 // // TODO: Add an handler for the `appinstalled` event
 // window.addEventListener('appinstalled', (event) => {});
-window.addEventListener('appinstalled', (event) => {
-  textHeader.textContent = 'Successfully installed!';
-  console.log('👍', 'appinstalled', event);
-});
+// window.addEventListener('appinstalled', (event) => {
+//   textHeader.textContent = 'Successfully installed!';
+//   console.log('👍', 'appinstalled', event);
+// });
 
 let deferredPrompt;
 const addBtn = document.getElementById("buttonInstall");
