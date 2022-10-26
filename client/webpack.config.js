@@ -70,6 +70,8 @@ module.exports = () => {
         background_color: "#7eb4e2",
         theme_color: "#7eb4e2",
         fingerprints: false,
+        inject: true,
+        ios: true,
         icons: [
           {
             src: "./src/assets/icons/icon_96x96.png",
