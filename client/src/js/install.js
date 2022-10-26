@@ -12,7 +12,7 @@ window.addEventListener('beforeinstallprompt', function (e) {
   e.preventDefault();
   promptEvent = e;
   listenToUserAction();
-  console.log('v103');
+  console.log('v105');
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
