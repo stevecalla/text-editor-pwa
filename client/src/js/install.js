@@ -2,6 +2,9 @@ const installBtn = document.getElementById("installButton");
 let promptEvent; 
 let isInstalled = false;
 
+installBtn.style.display = "none";
+installBtn.style.disabled = true;
+
 // // Logic for installing the PWA
 // TODO: Add an event handler to the `beforeinstallprompt` event
 // TODO:Capture event and defer
@@ -30,18 +33,24 @@ function presentAddToHome() {
       if (choice.outcome === 'accepted') {
         console.log('User accepted', choice.outcome);
         installBtn.style.display = "none";
+        installBtn.style.disabled = true;
         isInstalled = true;
         localStorage.setItem('isInstalled', true);
         } else {
             console.log('User dismissed', choice.outcome);
             isInstalled = false;
             installBtn.style.display = "block";
+            installBtn.style.disabled = false;
             localStorage.setItem('isInstalled', false);
         }
     })
 };
 
 window.addEventListener('load', () => {
+  installBtn.style.display = "none";
+  installBtn.style.disabled = true;
+
+
   if (localStorage.getItem('isInstalled')) {
     console.log('load storage = ', localStorage.getItem('isInstalled'))
     isInstalled = localStorage.getItem('isInstalled')
@@ -51,9 +60,11 @@ window.addEventListener('load', () => {
 
   if(isInstalled === true || isInstalled === 'true') {
     installBtn.style.display = "none";
+    installBtn.style.disabled = true;
     console.log('a = ', isInstalled, typeof(isInstalled));
   } else {
     installBtn.style.display = "block";
+    installBtn.style.disabled = false;
     console.log('b = ', isInstalled, typeof(isInstalled));
   }
 })
