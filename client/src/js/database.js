@@ -1,14 +1,14 @@
-import { openDB } from 'idb';
+import { openDB } from "idb";
 
 const initdb = async () =>
-  openDB('jate', 1, {
+  openDB("jate", 1, {
     upgrade(db) {
-      if (db.objectStoreNames.contains('jate')) {
-        console.log('jate database already exists');
+      if (db.objectStoreNames.contains("jate")) {
+        console.log("jate database already exists");
         return;
       }
-      db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
-      console.log('jate database created');
+      db.createObjectStore("jate", { keyPath: "id", autoIncrement: true });
+      console.log("jate database created");
     },
   });
 
@@ -31,18 +31,18 @@ const initdb = async () =>
 // };
 
 export const putDb = async (content) => {
-    console.log('Put to the database = ', content);
+  console.log("Put to the database = ", content);
 
-    try {
-    console.log('PUT to the database');
-    const jateDb = await openDB('jate', 1);
-    const tx = jateDb.transaction('jate', 'readwrite');
-    const store = tx.objectStore('jate');
+  try {
+    console.log("PUT to the database");
+    const jateDb = await openDB("jate", 1);
+    const tx = jateDb.transaction("jate", "readwrite");
+    const store = tx.objectStore("jate");
     const request = store.put({ id: 1, jate: content });
     const result = await request;
-    console.log('🚀 - data saved to the database', result);
+    console.log("🚀 - data saved to the database", result);
   } catch (error) {
-      console.error('putDb not implemented')
+    console.error("putDb not implemented");
   }
 };
 
@@ -51,22 +51,28 @@ export const putDb = async (content) => {
 // export const getAllDb = async () => {
 
 export const getDb = async () => {
-  console.log('Get from the database = ');
+  console.log("Get from the database = ");
 
   try {
-    console.log('GET all from the database');
-    const jateDb = await openDB('jate', 1);
-    const tx = jateDb.transaction('jate', 'readonly');
-    const store = tx.objectStore('jate');
+    console.log("GET all from the database");
+    const jateDb = await openDB("jate", 1);
+    const tx = jateDb.transaction("jate", "readonly");
+    const store = tx.objectStore("jate");
     const request = store.getAll();
     // const request = store.get(id);
     const result = await request;
-    console.log('result.value', result, result.toString(), typeof(result), result, {result});
+    console.log(
+      "result.value",
+      result,
+      result.toString(),
+      typeof result,
+      result,
+      { result }
+    );
     return result;
-  } 
-  catch (error) {
-    console.error('getDb not implemented')
-  } 
+  } catch (error) {
+    console.error("getDb not implemented");
+  }
 };
 
 initdb();

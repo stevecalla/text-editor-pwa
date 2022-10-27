@@ -1,19 +1,19 @@
-import { Workbox } from 'workbox-window';
-import Editor from './editor';
-import './database';
-import '../css/style.css';
-import { registerSW } from './register-sw';
-import '../assets/images/flavicon-shark.jpeg';
+import { Workbox } from "workbox-window";
+import Editor from "./editor";
+import "./database";
+import "../css/style.css";
+import { registerSW } from "./register-sw";
+import "../assets/images/flavicon-shark.jpeg";
 // import '../assets/images/logo.png';
 // import '../assets/images/flavicon.ico';
 // import '..assets/icons/';
 
-const main = document.querySelector('#main');
-main.innerHTML = '';
+const main = document.querySelector("#main");
+main.innerHTML = "";
 
 const loadSpinner = () => {
-  const spinner = document.createElement('div');
-  spinner.classList.add('spinner');
+  const spinner = document.createElement("div");
+  spinner.classList.add("spinner");
   spinner.innerHTML = `
   <div class="loading-container">
   <div class="loading-spinner" />
@@ -24,7 +24,7 @@ const loadSpinner = () => {
 
 const editor = new Editor();
 
-if (typeof editor === 'undefined') {
+if (typeof editor === "undefined") {
   loadSpinner();
 }
 
