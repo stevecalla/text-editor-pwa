@@ -77,6 +77,14 @@ Video #2: Demonstrates `npm run start` build process and Heroku deploy.
 
 ![Build & deploy video](./client/src/assets/images/01-demo.gif)
 
+## App Lighthouse Report
+
+Demonstrates app is PWA installable and optimized.
+
+[Link to LightHouse Audit](https://drive.google.com/file/d/1Vps6Uh7Ksx-bGdk2tzJrAcnzgJ5SIux1/view?usp=sharing)
+
+![Lighthouse Report](./client/src/assets/images/lighthouse-audit.png)
+
 ## Tests
 
 No tests at this time.

@@ -2,6 +2,7 @@ import { Workbox } from "workbox-window";
 import Editor from "./editor";
 import "./database";
 import "../css/style.css";
+import "../css/codeMirror.css";
 import { registerSW } from "./register-sw";
 import "../assets/images/flavicon-shark.jpeg";
 

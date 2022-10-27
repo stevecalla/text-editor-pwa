@@ -20,7 +20,10 @@ export default class {
       autofocus: true,
       indentUnit: 2,
       tabSize: 2,
+      contentHeight: 50,
     });
+
+    this.editor.setSize("100%", "90vh");
 
     // Section: When the editor is ready, set the value to whatever is stored in indexedDB.
     // Fallback to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
