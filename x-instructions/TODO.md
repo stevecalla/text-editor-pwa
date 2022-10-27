@@ -57,7 +57,11 @@ function hello(who = "world") {
 - [ ] what else?
 
 #SECTION
-GOOGLE VIDEO LINK
+GOOGLE VIDEO LINK - FUNCTIONALITY
 https://drive.google.com/file/d/1Xl7w_ENxvE4JRFaJZdJbtCQ5VbJj7T_J/view
+
+GOOGLE VIDEO LINK #2 - BUILD & DEPLOY
+https://drive.google.com/file/d/1w-U0LaVopIvtv7N_Aoczgp1UPkW9OKuw/view
+
 
 YOUTUBE VIDEO LINK

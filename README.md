@@ -65,15 +65,17 @@ Uses `IndexedDB` & `Local Storage` to create an object store & includes both GET
 
 ## App Preview - WalkThrough Video
 
-Demonstrates all of the content, functional and technical acceptance criteria.
+Video #1: Demonstrates all of the content, functional and technical acceptance criteria.
 
 [Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
 
-![TBD, TBD, TBD](./client/src/images/00-demo.gif)
+![Functionality video](./client/src/images/00-demo.gif)
 
-Screenshot #1: Demonstrates....
+Video #2: Demonstrates `npm run start` build process and Heroku deploy.
 
-![TBD, TBD, TBD.](./client/src/images/01-manifest.png)
+[Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
+
+![Build & deploy video](./client/src/images/01-demo.gif)
 
 ## Tests
 

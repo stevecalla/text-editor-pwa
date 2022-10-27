@@ -61,7 +61,7 @@ module.exports = () => {
       // }),  
       // TODO: Create a manifest.json:
       new WebpackPwaManifest({
-        name: "J.E.S.T. - Just Another Text Editor",
+        name: "Just Another Text Editor",
         short_name: "Text Editor",
         orientation: "portrait",
         display: "standalone",
