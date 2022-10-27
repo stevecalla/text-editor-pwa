@@ -1,12 +1,18 @@
 
 - [ ] what is the purpose of the text editor
+- [ ] mobile header is not centered...?
 - [ ] page is not loading the logo
 - [ ] focus/blur issue
 - [ ] loading images w/ file loader?
 - [ ] refactor
 - [ ] readme
 - [ ] refactor
+- [ ] push notifications
+- [ ] record audio
+- [ ] camera
+- [ ] colors and more text editor functionality
 ------
+
 # STARTED / IN PROGRESS
 ## webpack.cong
 - [ ] add logic
