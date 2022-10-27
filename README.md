@@ -1,4 +1,4 @@
-# Text Editor
+# Text Editor - Progressive Web App (PWA)
 [![License:  MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Index
@@ -15,7 +15,13 @@
 ## Description
 
 ```
-This app is a text editor that allows users create notes or code snippets. This is a deployed Progressive Web App (PWA) that allows the user to access content, functionality and saved data with or without an internet connection. The user can also install this PWA locally on desktop, ipad (or similar) and mobile phones (such asn iphone or android).
+
+This app is a text editor that allows users create notes or code snippets. 
+
+This is a deployed Progressive Web App (PWA) that allows the user to access content, functionality and saved data with or without an internet connection. 
+
+The user can also install this PWA locally on desktop, ipad (or similar) and mobile phones (such asn iphone or android).
+
 ```
 
 ## Installation
