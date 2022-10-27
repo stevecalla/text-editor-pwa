@@ -12,7 +12,6 @@ window.addEventListener("beforeinstallprompt", function (e) {
   e.preventDefault();
   promptEvent = e;
   listenToUserAction();
-  console.log("v105");
 });
 
 // Section: Implement a click event handler on the `butInstall` element
@@ -21,7 +20,6 @@ function listenToUserAction() {
   installBtn.addEventListener("click", presentAddToHome);
   if (isInstalled === false) {
     installBtn.style.display = "block";
-    console.log("false");
   }
 }
 
@@ -30,13 +28,11 @@ function presentAddToHome() {
   promptEvent.prompt(); // Wait for the user to respond to the prompt
   promptEvent.userChoice.then((choice) => {
     if (choice.outcome === "accepted") {
-      console.log("User accepted", choice.outcome);
       installBtn.style.display = "none";
       installBtn.style.disabled = true;
       isInstalled = true;
       localStorage.setItem("isInstalled", true);
     } else {
-      console.log("User dismissed", choice.outcome);
       isInstalled = false;
       installBtn.style.display = "block";
       installBtn.style.disabled = false;
@@ -50,20 +46,15 @@ window.addEventListener("load", () => {
   installBtn.style.disabled = true;
 
   if (localStorage.getItem("isInstalled")) {
-    console.log("load storage = ", localStorage.getItem("isInstalled"));
     isInstalled = localStorage.getItem("isInstalled");
   }
-
-  console.log("isInstalled = ", isInstalled);
 
   if (isInstalled === true || isInstalled === "true") {
     installBtn.style.display = "none";
     installBtn.style.disabled = true;
-    console.log("a = ", isInstalled, typeof isInstalled);
   } else {
     installBtn.style.display = "block";
     installBtn.style.disabled = false;
-    console.log("b = ", isInstalled, typeof isInstalled);
   }
 });
 
