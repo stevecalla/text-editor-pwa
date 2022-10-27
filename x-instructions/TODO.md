@@ -6,7 +6,9 @@
 - [ ] loading images w/ file loader?
 - [ ] refactor
 - [ ] readme
+- [ ] readme images
 - [ ] refactor
+
 - [ ] push notifications
 - [ ] record audio
 - [ ] camera
@@ -14,28 +16,38 @@
 ------
 
 # STARTED / IN PROGRESS
-## webpack.cong
-- [ ] add logic
+## webpack.conf
+- [x] add logic
 
 ## index.js
-- [ ] register worker
+- [x] register worker
 
 ## webpack config
-- [ ] added all kinds of stuff
+- [x] added all kinds of stuff
 
 ## src-sw.js
-- [ ] asset cache
-- [ ] conflict with manifest sw cache?
-- [ ] page cache - working in icognito but not regular page
+- [x] asset cache
+- [x] conflict with manifest sw cache?
+- [x] page cache - working in icognito but not regular page
 ------
 # TO DO
 ## install.js button
-- [ ] add logic
+- [x] add logic
 
 ## database.js
-- [ ] add logic
-- [ ] related to editor.js
+- [x] add logic
+- [x] related to editor.js
 
 ## LOGOS
-- [ ] modify logo to size and mask
-- [ ] fix logo on home screen
+- [x] modify logo to size and mask
+- [x] fix logo on home screen
+
+## INPUT
+function hello(who = "world") {
+  console.log(`Hello, ${who}!`)
+}
+
+## TODO Today
+- workout
+- walk dog
+- [ ] what else?

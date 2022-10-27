@@ -51,9 +51,9 @@ Uses `IndexedDB` & `Local Storage` to create an object store & includes both GET
 ## Technology
 
 1. `Babel:` JavaScript transcompiler mainly used to convert ECMAScript 2015+ code into a backwards-compatible version of JavaScript.
-2. `Code Mirror:`  
+2. `CodeMirror:` A text & code editor.
 3. `Concurrently:` NPM package that runs multiple processes, or servers, from a single command-line interface. 
-4. `Express:` A text & code Editor
+4. `Express:` A server framework.
 5. `Git/Github:` Repo and version management.
 6. `Heroku:` Deployment.
 7. `IndexDB & idb:` idb is a wrapper library that mirrors the IndexedDB API — a NoSQL web storage API in the browser — adding improvements making the API easier to use.

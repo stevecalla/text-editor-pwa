@@ -198,14 +198,15 @@ h1 {
   }
 
   .navbar-brand {
-    display: none;
+    /* display: none; */
   }
-
+  
   #navbar {
     justify-content: center;
   }
-
+  
   h1 {
+    text-align: center;
     font-size: 18px;
   }
 }
