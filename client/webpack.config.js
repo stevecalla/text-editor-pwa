@@ -127,14 +127,15 @@ module.exports = () => {
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+          // type: 'asset/resource',
+          // loader: 'file-loader'
           use: {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'images',
-              publicPath: 'images',
+              outputPath: 'assets/images',
+              publicPath: 'assets',
             },
           },
         },

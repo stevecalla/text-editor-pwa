@@ -3,7 +3,9 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 import { registerSW } from './register-sw';
-// import '../images/';
+import '../assets/images/flavicon-shark.jpeg';
+// import '../assets/images/logo.png';
+// import '../assets/images/flavicon.ico';
 // import '..assets/icons/';
 
 const main = document.querySelector('#main');
