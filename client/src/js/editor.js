@@ -6,7 +6,7 @@ export default class {
   constructor() {
     const localData = localStorage.getItem("content");
 
-    // check if CodeMirror is loaded
+    // Section: Check if CodeMirror is loaded
     if (typeof CodeMirror === "undefined") {
       throw new Error("CodeMirror is not loaded");
     }
@@ -45,7 +45,7 @@ export default class {
     this.editor.on("change", () => {
       let rawContent = this.editor.getValue();
       // var removedHeader = rawContent.replace(header, ""); // If necessary to remove the JEST text on the text editor screen
-      localStorage.setItem("content", removedHeader || rawContent);
+      localStorage.setItem("content", rawContent);
       putDb(localStorage.getItem("content"));
     });
 
@@ -56,7 +56,7 @@ export default class {
       console.log("The editor has lost focus");
       let rawContent = this.editor.getValue();
       // var removedHeader = rawContent.replace(header, ""); // If necessary to remove the JEST text on the text editor screen
-      localStorage.setItem("content", removedHeader || rawContent);
+      localStorage.setItem("content", rawContent);
       putDb(localStorage.getItem("content"));
     });
   }
