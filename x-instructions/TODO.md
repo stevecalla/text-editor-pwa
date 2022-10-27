@@ -42,12 +42,15 @@
 - [x] modify logo to size and mask
 - [x] fix logo on home screen
 
-## INPUT
+# URL
+https://text-editor-calla.herokuapp.com/
+
+# CODE
 function hello(who = "world") {
   console.log(`Hello, ${who}!`)
 }
 
-## TODO Today
+# TODO
 - workout
 - walk dog
 - [ ] what else?
