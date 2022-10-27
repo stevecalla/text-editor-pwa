@@ -211,3 +211,9 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
