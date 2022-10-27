@@ -7,9 +7,10 @@
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Features](#features)
-5. [Contributing](#contributing)
-6. [Resources](#resources)
-7. [License](#license)
+5. [Technology](#technology)
+6. [Contributing](#contributing)
+7. [Resources](#resources)
+8. [License](#license)
 
 ## Description
 
@@ -60,15 +61,13 @@ Uses `IndexedDB` & `Local Storage` to create an object store & includes both GET
 
 Demonstrates how to start the application’s server and all of the technical acceptance criteria. This includes syncing with Mongo via Mongoose at server startup, seeding, models and schema as required, date formatting and more.
 
-[Link to Start/Sync/Tech Criteria](https://youtu.be/HNc61D-j4nI)
+[Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
 
-![In Insomnia... TBD.](assets/1_video_start_tech_req.gif)
+![TBD, TBD, TBD](./client/src/images/00-demo.gif)
 
 Screenshot #1: Demonstrates....
 
-[Link to User Routes](https://youtu.be/rqdCeiGhVAI)
-
-![In Insomnia... TBD.](assets/2_video_users_routes.gif)
+![TBD, TBD, TBD.](./client/src/images/01-manifest.png)
 
 ## Tests
 
