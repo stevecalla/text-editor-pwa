@@ -65,3 +65,5 @@ https://drive.google.com/file/d/1w-U0LaVopIvtv7N_Aoczgp1UPkW9OKuw/view
 
 
 YOUTUBE VIDEO LINK
+[Link to WalkThrough Video](https://youtu.be/7rJIh6TlAho)
+[Link to Build & Deploy](https://youtu.be/eVl7gfp6B74)

@@ -67,13 +67,13 @@ Uses `IndexedDB` & `Local Storage` to create an object store & includes both GET
 
 Video #1: Demonstrates all of the content, functional and technical acceptance criteria.
 
-[Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
+[Link to WalkThrough Video](https://youtu.be/7rJIh6TlAho)
 
 ![Functionality video](./client/src/images/00-demo.gif)
 
 Video #2: Demonstrates `npm run start` build process and Heroku deploy.
 
-[Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
+[Link to Build & Deploy](https://youtu.be/eVl7gfp6B74)
 
 ![Build & deploy video](./client/src/images/01-demo.gif)
 
