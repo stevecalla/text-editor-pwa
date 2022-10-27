@@ -20,7 +20,7 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      //todo add "" public path to prevent auto prefix on manifest path (S Calla edit)
+      // section: add "" public path to prevent auto prefix on manifest path (S Calla edit)
       publicPath: "",
       clean: true,
     },
@@ -37,29 +37,7 @@ module.exports = () => {
         // clientsClaim: true,
         // skipWaiting: true,
       }), 
-      // new GenerateSW(),
-      // new WorkboxPlugin.GenerateSW({
-      //   // Exclude images from the precache
-      //   exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-        
-      //   // Define runtime caching rules.
-      //   runtimeCaching: [{
-      //     // Match any request ends with .png, .jpg, .jpeg or .svg or .gif.
-      //     urlPattern: /\.(?:png|svg|jpg|jpeg|gif)$/,
-      //     handler: 'NetworkFirst',
-          
-      //     options: {
-      //       // Use a custom cache name.
-      //       cacheName: 'images',
-            
-      //       // Only cache 2 images.
-      //       expiration: {
-      //         maxEntries: 2,
-      //       },
-      //     },
-      //   }],
-      // }),  
-      // TODO: Create a manifest.json:
+      // section: Create a manifest.json:
       new WebpackPwaManifest({
         name: "Just Another Text Editor",
         short_name: "Text Editor",
@@ -119,7 +97,7 @@ module.exports = () => {
       }),
     ],
       
-      // TODO: Add CSS loaders and babel to webpack.
+      // section: Add CSS loaders and babel to webpack.
       module: {
         rules: [
           {
@@ -128,15 +106,10 @@ module.exports = () => {
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
-          // type: 'asset/resource',
-          // loader: 'file-loader'
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images',
-              publicPath: 'assets',
-            },
+          type: 'asset/resource',
+          // section: retrieves from the asset folder; puts assets in assets/images with custom name rather than using fingerprint
+          generator: {
+            filename: 'assets/images/[name][ext]'
           },
         },
         {

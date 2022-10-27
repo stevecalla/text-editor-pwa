@@ -10,7 +10,10 @@
 - [ ] check google and youtube videos
 - [x] add flavicon?
 
-- [ ] push notifications
+- [x] push notification research
+  - https://www.simicart.com/blog/pwa-push-notifications/
+  - https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push
+  - https://www.educative.io/blog/5-minute-guide-to-push-notifications-in-pwa
 - [ ] record audio
 - [ ] camera
 - [ ] colors & more text editor functionality
