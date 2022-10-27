@@ -194,7 +194,7 @@ h1 {
 
 @media only screen and (max-width: 600px) {
   .nav-btn {
-    /* display: none; */
+    display: none;
   }
 
   .navbar-brand {
