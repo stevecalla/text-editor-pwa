@@ -109,7 +109,7 @@ module.exports = () => {
           type: 'asset/resource',
           // section: retrieves from the asset folder; puts assets in assets/images with custom name rather than using fingerprint
           generator: {
-            filename'assets/images/[name][ext]'
+            filename: 'assets/images/[name][ext]'
           },
         },
         {
