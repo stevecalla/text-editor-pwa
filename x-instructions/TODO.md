@@ -1,19 +1,19 @@
 
-- [ ] what is the purpose of the text editor
-- [ ] mobile header is not centered...?
-- [ ] page is not loading the logo
-- [ ] focus/blur issue
-- [ ] loading images w/ file loader?
+- [x] what is the purpose of the text editor
+- [x] mobile header is not centered...?
+- [x] page is not loading the logo
+- [x] focus/blur issue
+- [x] loading images w/ file loader?
 - [ ] refactor
-- [ ] readme
-- [ ] readme images
-- [ ] refactor
-- [ ] add flavicon?
+- [x] readme
+- [x] readme images
+- [ ] check google and youtube videos
+- [x] add flavicon?
 
 - [ ] push notifications
 - [ ] record audio
 - [ ] camera
-- [ ] colors and more text editor functionality
+- [ ] colors & more text editor functionality
 ------
 
 # STARTED / IN PROGRESS
