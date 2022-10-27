@@ -5,16 +5,6 @@ export const registerSW = () => {
     // Use the window load event to keep the page load performant
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/service-worker.js");
-      // navigator.serviceWorker.register('/src-sw.js');
     });
   }
 };
-
-// Check if service workers are supported
-// if ('serviceWorker' in navigator) {
-//   // register workbox service worker
-//   const workboxSW = new Workbox('/src-sw.js');
-//   workboxSW.register();
-// } else {
-//   console.error('Service workers are not supported in this browser.');
-// }

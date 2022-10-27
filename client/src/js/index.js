@@ -4,9 +4,6 @@ import "./database";
 import "../css/style.css";
 import { registerSW } from "./register-sw";
 import "../assets/images/flavicon-shark.jpeg";
-// import '../assets/images/logo.png';
-// import '../assets/images/flavicon.ico';
-// import '..assets/icons/';
 
 const main = document.querySelector("#main");
 main.innerHTML = "";
@@ -14,11 +11,12 @@ main.innerHTML = "";
 const loadSpinner = () => {
   const spinner = document.createElement("div");
   spinner.classList.add("spinner");
-  spinner.innerHTML = `
-  <div class="loading-container">
-  <div class="loading-spinner" />
-  </div>
-  `;
+  spinner.innerHTML = 
+    `
+      <div class="loading-container">
+      <div class="loading-spinner" />
+      </div>
+    `;
   main.appendChild(spinner);
 };
 
@@ -30,11 +28,3 @@ if (typeof editor === "undefined") {
 
 // Call registerSW method
 registerSW();
-// Check if service workers are supported
-// if ('serviceWorker' in navigator) {
-//   // register workbox service worker
-//   const workboxSW = new Workbox('/src-sw.js');
-//   workboxSW.register();
-// } else {
-//   console.error('Service workers are not supported in this browser.');
-// }

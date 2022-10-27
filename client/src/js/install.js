@@ -5,9 +5,9 @@ let isInstalled = false;
 installBtn.style.display = "none";
 installBtn.style.disabled = true;
 
-// // Logic for installing the PWA
-// TODO: Add an event handler to the `beforeinstallprompt` event
-// TODO:Capture event and defer
+// Section: Logic for installing the PWA
+// Add an event handler to the `beforeinstallprompt` event
+// Capture event and defer
 window.addEventListener("beforeinstallprompt", function (e) {
   e.preventDefault();
   promptEvent = e;
@@ -15,8 +15,8 @@ window.addEventListener("beforeinstallprompt", function (e) {
   console.log("v105");
 });
 
-// TODO: Implement a click event handler on the `butInstall` element
-// listen to install button click
+// Section: Implement a click event handler on the `butInstall` element
+// Listen to install button click
 function listenToUserAction() {
   installBtn.addEventListener("click", presentAddToHome);
   if (isInstalled === false) {
@@ -25,7 +25,7 @@ function listenToUserAction() {
   }
 }
 
-// present install prompt to user
+// Section: Present install prompt to user
 function presentAddToHome() {
   promptEvent.prompt(); // Wait for the user to respond to the prompt
   promptEvent.userChoice.then((choice) => {
@@ -67,9 +67,7 @@ window.addEventListener("load", () => {
   }
 });
 
-// // TODO: Add an handler for the `appinstalled` event
-// window.addEventListener('appinstalled', (event) => {});
-// window.addEventListener('appinstalled', (event) => {
-//   textHeader.textContent = 'Successfully installed!';
-//   console.log('👍', 'appinstalled', event);
-// });
+// Section: Add an handler for the `appinstalled` event
+window.addEventListener('appinstalled', (event) => {
+  console.log('👍', 'appinstalled', event);
+});
