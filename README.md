@@ -69,13 +69,13 @@ Video #1: Demonstrates all of the content, functional and technical acceptance c
 
 [Link to WalkThrough Video](https://youtu.be/7rJIh6TlAho)
 
-![Functionality video](./client/src/images/00-demo.gif)
+![Functionality video](./client/src/assets/images/00-demo.gif)
 
 Video #2: Demonstrates `npm run start` build process and Heroku deploy.
 
 [Link to Build & Deploy](https://youtu.be/eVl7gfp6B74)
 
-![Build & deploy video](./client/src/images/01-demo.gif)
+![Build & deploy video](./client/src/assets/images/01-demo.gif)
 
 ## Tests
 
