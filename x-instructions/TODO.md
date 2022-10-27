@@ -8,6 +8,7 @@
 - [ ] readme
 - [ ] readme images
 - [ ] refactor
+- [ ] add flavicon?
 
 - [ ] push notifications
 - [ ] record audio
@@ -54,3 +55,9 @@ function hello(who = "world") {
 - workout
 - walk dog
 - [ ] what else?
+
+#SECTION
+GOOGLE VIDEO LINK
+https://drive.google.com/file/d/1Xl7w_ENxvE4JRFaJZdJbtCQ5VbJj7T_J/view
+
+YOUTUBE VIDEO LINK

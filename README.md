@@ -65,7 +65,7 @@ Uses `IndexedDB` & `Local Storage` to create an object store & includes both GET
 
 ## App Preview - WalkThrough Video
 
-Demonstrates how to start the application’s server and all of the technical acceptance criteria. This includes syncing with Mongo via Mongoose at server startup, seeding, models and schema as required, date formatting and more.
+Demonstrates all of the content, functional and technical acceptance criteria.
 
 [Link to Website WalkThrough Video](https://youtu.be/HNc61D-j4nI)
 
