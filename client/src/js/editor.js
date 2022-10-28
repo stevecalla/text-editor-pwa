@@ -42,7 +42,7 @@ export default class {
       let rawContent = this.editor.getValue();
       // var removedHeader = rawContent.replace(header, ""); // If necessary to remove the JEST text on the text editor screen
       localStorage.setItem("content", rawContent);
-      // putDb(localStorage.getItem("content"));
+      putDb(localStorage.getItem("content"));
     });
 
     // Section: Save the content of the editor when the editor itself is loses focus
