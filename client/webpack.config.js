@@ -1,13 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-
 // section: Configure workbox plugins for a service worker and manifest file.
-// Require the GenerateSW class of the WorkBoxPlugin
-const WorkboxPlugin = require("workbox-webpack-plugin");
-// const { GenerateSW } = require('workbox-webpack-plugin');
+// Generate the service worker class of the WorkBoxPlugin
 const { InjectManifest } = require("workbox-webpack-plugin");
-// Require the GenerateSW class of the manifest
+// Generate the PWA manifest
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+// Generate unique css "main.css" in dist
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = () => {
@@ -48,48 +46,17 @@ module.exports = () => {
         inject: true,
         ios: true,
         icons: [
-          // {
-          //   src: path.resolve('src/assets/icons/logo.png'),
-          //   destination: "assets/icons",
-          //   sizes: [96, 128, 256, 384, 512], // converts logo.png to multiple sizes & png files
-          //   purpsose: "any",
-          // },
-          // section: didn't use array of sizes because it didn't change the img size appropriately
           {
-            src: path.resolve('src/assets/icons/icon_96x96.png'),
+            src: path.resolve('src/assets/icons/logo.png'),
             destination: "assets/icons",
-            sizes: "96x96",
-            purpose: "any",
-          },
-          {
-            src: path.resolve('src/assets/icons/icon_128x128.png'),
-            destination: "assets/icons",
-            sizes: "128x128",
-            purpose: "any",
+            sizes: [96, 128, 256, 384, 512], // converts logo.png to multiple sizes & png files
+            purpsose: "any",
           },
           {
             src: path.resolve('src/assets/icons/icon_192x192.png'),
             destination: "assets/icons",
             sizes: "192x192",
             purpose: "maskable", // section: satisfies lighthouse criteria
-          },
-          {
-            src: path.resolve('src/assets/icons/icon_256x256.png'),
-            destination: "assets/icons",
-            sizes: "256x256",
-            purpose: "any",
-          },
-          {
-            src: path.resolve('src/assets/icons/icon_384x384.png'),
-            destination: "assets/icons",
-            sizes: "384x384",
-            purpose: "any",
-          },
-          {
-            src: path.resolve('src/assets/icons/icon_512x512.png'),
-            destination: "assets/icons",
-            sizes: "512x512",
-            purpose: "any",
           },
         ],
       }),
