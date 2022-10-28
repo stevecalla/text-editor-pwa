@@ -99,7 +99,7 @@ Contributor Covenant Code of Conduct
 
 1. Project Manager: [Steve Calla - GitHub Profile](https://github.com/stevecalla)
 2. Deployed Site URL - Heroku: [LINK](https://text-editor-calla.herokuapp.com/)
-3. GitHub Repo: <https://github.com/stevecalla/social-network-api>
+3. GitHub Repo: <https://github.com/stevecalla/text-editor-pwa>
 4. Contact: [Email Steve](mailto:callasteven@gmail.com)
 
 ## License 
