@@ -215,5 +215,6 @@ h1 {
 .CodeMirror {
   height: 90vh !important;
   border: 3px solid var(--primary) !important;
+  font-size: 18px;
 }
 
