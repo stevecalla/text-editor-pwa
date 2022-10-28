@@ -8,9 +8,9 @@ const { precacheAndRoute } = require("workbox-precaching/precacheAndRoute");
 precacheAndRoute(self.__WB_MANIFEST);
 
 // On install, activate right away
-// self.addEventListener('install', function (event) {
-// 	self.skipWaiting();
-// });
+self.addEventListener('install', function (event) {
+	self.skipWaiting();
+});
 
 const pageCache = new CacheFirst({
   cacheName: "page-cache",
