@@ -21,7 +21,7 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       // section: add "" public path to prevent auto prefix on manifest path (S Calla edit)
-      // publicPath: "",
+      publicPath: "",
       clean: true,
     },
     plugins: [
