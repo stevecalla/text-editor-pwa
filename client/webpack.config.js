@@ -51,7 +51,8 @@ module.exports = () => {
           {
             src: path.resolve('src/assets/icons/logo.png'),
             destination: "assets/icons",
-            sizes: [96, 128, 192, 256, 384, 512] // converts logo.png to multiple sizes & png files // still satisfy lighthouse?
+            sizes: [96, 128, 192, 256, 384, 512], // converts logo.png to multiple sizes & png files // still satisfy lighthouse?
+            purpose: "maskable",
           },
           // {
           //   src: "./src/assets/icons/icon_96x96.png",
