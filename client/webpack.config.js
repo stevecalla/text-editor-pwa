@@ -49,8 +49,14 @@ module.exports = () => {
           {
             src: path.resolve('src/assets/icons/logo.png'),
             destination: "assets/icons",
-            sizes: [96, 128, 256, 384, 512], // converts logo.png to multiple sizes & png files
+            sizes: [128, 256, 384, 512], // converts logo.png to multiple sizes & png files
             purpsose: "any",
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_96x96.png'),
+            destination: "assets/icons",
+            sizes: "96x96",
+            purpose: "any", // section: attempt to ensure the install logo is black vs transparent background
           },
           {
             src: path.resolve('src/assets/icons/icon_192x192.png'),

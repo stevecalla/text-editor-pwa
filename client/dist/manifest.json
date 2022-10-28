@@ -7,6 +7,12 @@
       "purpose": "maskable"
     },
     {
+      "src": "assets/icons/icon_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "assets/icons/icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
@@ -24,11 +30,6 @@
     {
       "src": "assets/icons/icon_128x128.png",
       "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon_96x96.png",
-      "sizes": "96x96",
       "type": "image/png"
     }
   ],
