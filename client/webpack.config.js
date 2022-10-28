@@ -48,11 +48,48 @@ module.exports = () => {
         inject: true,
         ios: true,
         icons: [
+          // {
+          //   src: path.resolve('src/assets/icons/logo.png'),
+          //   destination: "assets/icons",
+          //   sizes: [96, 128, 256, 384, 512], // converts logo.png to multiple sizes & png files
+          //   purpsose: "any",
+          // },
+          // section: didn't use array of sizes because it didn't change the img size appropriately
           {
-            src: path.resolve('src/assets/icons/logo.png'),
+            src: path.resolve('src/assets/icons/icon_96x96.png'),
             destination: "assets/icons",
-            sizes: [96, 128, 192, 256, 384, 512], // converts logo.png to multiple sizes & png files
-            purpose: "maskable", // satisfies lighthouse criteria
+            sizes: "96x96",
+            purpose: "any",
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_128x128.png'),
+            destination: "assets/icons",
+            sizes: "128x128",
+            purpose: "any",
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_192x192.png'),
+            destination: "assets/icons",
+            sizes: "192x192",
+            purpose: "maskable", // section: satisfies lighthouse criteria
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_256x256.png'),
+            destination: "assets/icons",
+            sizes: "256x256",
+            purpose: "any",
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_384x384.png'),
+            destination: "assets/icons",
+            sizes: "384x384",
+            purpose: "any",
+          },
+          {
+            src: path.resolve('src/assets/icons/icon_512x512.png'),
+            destination: "assets/icons",
+            sizes: "512x512",
+            purpose: "any",
           },
         ],
       }),
