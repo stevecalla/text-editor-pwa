@@ -31,7 +31,7 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === "navigate", pageCache);
 
-// TODO: Implement asset caching
+// Section: Implement asset caching
 // registerRoute();
 registerRoute(
   ({ request }) => request.destination === "image",
@@ -48,8 +48,3 @@ registerRoute(
     ],
   })
 );
-
-// this.addEventListener('fetch', function (event) {
-//   // This fetch function is required for the SW to be detected and is intentionally empty
-//   // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
-// });

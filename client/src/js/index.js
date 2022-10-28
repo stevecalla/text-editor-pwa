@@ -5,7 +5,6 @@ import "../css/style.css";
 import "../css/codeMirror.css";
 import { registerSW } from "./register-sw";
 import "../assets/images/favicon-shark.jpeg";
-import "../assets/images/favicon-shark.jpeg";
 import "../assets/images/favicon.ico";
 
 const main = document.querySelector("#main");
